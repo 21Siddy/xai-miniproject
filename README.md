@@ -35,7 +35,7 @@ pip install -r requirements.txt
 conda install -c dglteam/label/th23_cu121 dgl
 ```
 
-### Step 6: cd into the EDGE directory and test with a command similar to this
+### Step 6: test with a command similar to this
 ```bash
 (edge) xaimonster@LAPTOP-UGEQJG77:~/xai-miniproject/EDGE$ python main.py --datasets videogames --explainers EvoLearner --model RGCN --train --num_runs 5 --print_results
 ```
