@@ -1,0 +1,5 @@
+IRI,idx,Ground Truths,GNN Preds,EvoLearner,Run
+http://www.wikidata.org/entity/Q217423,7,1,1,1,1
+http://www.wikidata.org/entity/Q216293,10,0,0,0,1
+http://www.wikidata.org/entity/Q57270,14,1,1,1,1
+http://www.wikidata.org/entity/Q216995,28,1,0,1,1

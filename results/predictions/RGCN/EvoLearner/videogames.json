@@ -1,0 +1,32 @@
+{
+  "Run_1": {
+    "http://example.org/videogame#MultiGenreConcept": {
+      "best_concept": "OWLObjectMinCardinality(property=OWLObjectProperty(IRI('http://example.org/videogame#','hasGenre')),2,filler=OWLClass(IRI('http://example.org/videogame#','Genre')))",
+      "concept_length": 4
+    }
+  },
+  "Run_2": {
+    "http://example.org/videogame#MultiGenreConcept": {
+      "best_concept": "OWLObjectMinCardinality(property=OWLObjectProperty(IRI('http://example.org/videogame#','hasGenre')),2,filler=OWLClass(IRI('http://example.org/videogame#','Genre')))",
+      "concept_length": 4
+    }
+  },
+  "Run_3": {
+    "http://example.org/videogame#MultiGenreConcept": {
+      "best_concept": "OWLObjectMinCardinality(property=OWLObjectProperty(IRI('http://example.org/videogame#','hasGenre')),2,filler=OWLClass(IRI('http://example.org/videogame#','Genre')))",
+      "concept_length": 4
+    }
+  },
+  "Run_4": {
+    "http://example.org/videogame#MultiGenreConcept": {
+      "best_concept": "OWLObjectMinCardinality(property=OWLObjectProperty(IRI('http://example.org/videogame#','hasGenre')),2,filler=OWLClass(IRI('http://example.org/videogame#','Genre')))",
+      "concept_length": 4
+    }
+  },
+  "Run_5": {
+    "http://example.org/videogame#MultiGenreConcept": {
+      "best_concept": "OWLObjectUnionOf((OWLObjectMinCardinality(property=OWLObjectProperty(IRI('http://example.org/videogame#','hasGenre')),2,filler=OWLClass(IRI('http://example.org/videogame#','Genre'))), OWLClass(IRI('http://example.org/videogame#','Genre'))))",
+      "concept_length": 6
+    }
+  }
+}

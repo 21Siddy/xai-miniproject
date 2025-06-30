@@ -1,0 +1,8 @@
+{
+  "Run_1": {
+    "id1instance": {
+      "best_concept": "OWLObjectAllValuesFrom(property=OWLObjectProperty(IRI('http://swrc.ontoware.org/ontology#','worksAtProject')),filler=OWLObjectMaxCardinality(property=OWLObjectProperty(IRI('http://swrc.ontoware.org/ontology#','projectInfo')),9,filler=OWLClass(IRI('http://swrc.ontoware.org/ontology#','Publication'))))",
+      "concept_length": 6
+    }
+  }
+}

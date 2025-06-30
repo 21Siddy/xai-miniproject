@@ -1,0 +1,2168 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:vg="http://example.org/videogame#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://example.org/videogame#VideoGameEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/videogame#availableOn -->
+
+    <ObjectProperty rdf:about="http://example.org/videogame#availableOn">
+        <rdfs:domain rdf:resource="http://example.org/videogame#Game"/>
+        <rdfs:range rdf:resource="http://example.org/videogame#Platform"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/videogame#developedBy -->
+
+    <ObjectProperty rdf:about="http://example.org/videogame#developedBy">
+        <rdfs:domain rdf:resource="http://example.org/videogame#Game"/>
+        <rdfs:range rdf:resource="http://example.org/videogame#Developer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/videogame#hasGenre -->
+
+    <ObjectProperty rdf:about="http://example.org/videogame#hasGenre">
+        <rdfs:domain rdf:resource="http://example.org/videogame#Game"/>
+        <rdfs:range rdf:resource="http://example.org/videogame#Genre"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/videogame#publishedBy -->
+
+    <ObjectProperty rdf:about="http://example.org/videogame#publishedBy">
+        <rdfs:domain rdf:resource="http://example.org/videogame#Game"/>
+        <rdfs:range rdf:resource="http://example.org/videogame#Publisher"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/videogame#releasedInCountry -->
+
+    <ObjectProperty rdf:about="http://example.org/videogame#releasedInCountry">
+        <rdfs:domain rdf:resource="http://example.org/videogame#Game"/>
+        <rdfs:range rdf:resource="http://example.org/videogame#Country"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/videogame#releaseDate -->
+
+    <DatatypeProperty rdf:about="http://example.org/videogame#releaseDate">
+        <rdfs:domain rdf:resource="http://example.org/videogame#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/videogame#Company -->
+
+    <Class rdf:about="http://example.org/videogame#Company"/>
+    
+
+
+    <!-- http://example.org/videogame#Country -->
+
+    <Class rdf:about="http://example.org/videogame#Country">
+        <rdfs:subClassOf rdf:resource="http://example.org/videogame#VideoGameEntity"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/videogame#Developer -->
+
+    <Class rdf:about="http://example.org/videogame#Developer">
+        <rdfs:subClassOf rdf:resource="http://example.org/videogame#Company"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/videogame#Game -->
+
+    <Class rdf:about="http://example.org/videogame#Game">
+        <rdfs:subClassOf rdf:resource="http://example.org/videogame#VideoGameEntity"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/videogame#Genre -->
+
+    <Class rdf:about="http://example.org/videogame#Genre">
+        <rdfs:subClassOf rdf:resource="http://example.org/videogame#VideoGameEntity"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/videogame#Platform -->
+
+    <Class rdf:about="http://example.org/videogame#Platform">
+        <rdfs:subClassOf rdf:resource="http://example.org/videogame#VideoGameEntity"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/videogame#Publisher -->
+
+    <Class rdf:about="http://example.org/videogame#Publisher">
+        <rdfs:subClassOf rdf:resource="http://example.org/videogame#Company"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/videogame#VideoGameEntity -->
+
+    <Class rdf:about="http://example.org/videogame#VideoGameEntity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/videogame#Acorn_Archimedes -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Acorn_Archimedes">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Acorn Archimedes</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Acorn_Electron -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Acorn_Electron">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Acorn Electron</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Activision_Publishing -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Activision_Publishing">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Activision Publishing</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Alexey_Pajitnov -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Alexey_Pajitnov">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Alexey Pajitnov</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Amstrad_CPC -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Amstrad_CPC">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Amstrad CPC</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Amstrad_PCW -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Amstrad_PCW">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Amstrad PCW</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Android -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Android">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Android</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Apple_II -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Apple_II">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Apple II</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Apple_IIGS -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Apple_IIGS">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Apple IIGS</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Apple_II_series -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Apple_II_series">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Apple II series</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Aspyr -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Aspyr">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Aspyr</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Atari -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Atari">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Atari</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Atari_Falcon -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Atari_Falcon">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Atari Falcon</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Atari_ST -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Atari_ST">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Atari ST</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Australia -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Australia">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">Australia</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#BBC_Micro -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#BBC_Micro">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">BBC Micro</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Bethesda_Softworks -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Bethesda_Softworks">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Bethesda Softworks</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Black_Isle_Studios -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Black_Isle_Studios">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Black Isle Studios</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Capcom -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Capcom">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Capcom</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Christmas_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Christmas_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">Christmas video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Classic_Mac_OS -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Classic_Mac_OS">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Classic Mac OS</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#ClickBoom -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#ClickBoom">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">ClickBoom</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Codemasters -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Codemasters">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Codemasters</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Commodore_64 -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Commodore_64">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Commodore 64</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Commodore_Amiga -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Commodore_Amiga">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Commodore Amiga</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#CyberStep -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#CyberStep">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">CyberStep</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#DOS -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#DOS">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">DOS</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Denmark -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Denmark">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">Denmark</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#E_Frontier -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#E_Frontier">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">E Frontier</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Eidos_Interactive -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Eidos_Interactive">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Eidos Interactive</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Feral_Interactive -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Feral_Interactive">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Feral Interactive</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Firaxis_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Firaxis_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Firaxis Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#GSC_Game_World -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#GSC_Game_World">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">GSC Game World</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#GT_Interactive_Software -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#GT_Interactive_Software">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">GT Interactive Software</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Game_Boy -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Game_Boy">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Game Boy</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Game_Boy_Advance -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Game_Boy_Advance">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Game Boy Advance</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Guerrilla_Cambridge -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Guerrilla_Cambridge">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Guerrilla Cambridge</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Hewson_Consultants -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Hewson_Consultants">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Hewson Consultants</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#IBM_PC_compatible -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#IBM_PC_compatible">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">IBM PC compatible</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Ian_Bell -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Ian_Bell">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Ian Bell</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Ian_Weatherburn -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Ian_Weatherburn">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Ian Weatherburn</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Imagine_Software -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Imagine_Software">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Imagine Software</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Imagineer -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Imagineer">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Imagineer</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Infogrames -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Infogrames">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Infogrames</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Intelligent_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Intelligent_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Intelligent Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Interplay_Entertainment -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Interplay_Entertainment">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Interplay Entertainment</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Irrational_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Irrational_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Irrational Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Japan -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Japan">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">Japan</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Linux -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Linux">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Linux</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Lucasfilm_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Lucasfilm_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Lucasfilm Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#MOTO_Gamme -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#MOTO_Gamme">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">MOTO Gamme</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#MS-DOS -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#MS-DOS">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">MS-DOS</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#MSX -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#MSX">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">MSX</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#MacSoft_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#MacSoft_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">MacSoft Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Mac_OS_operating_systems -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Mac_OS_operating_systems">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Mac OS operating systems</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Macmillan_Inc -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Macmillan_Inc">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Macmillan Inc.</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Makura -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Makura">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Makura</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Maxis -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Maxis">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Maxis</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Microsoft_Windows -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Microsoft_Windows">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Microsoft Windows</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Midway_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Midway_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Midway Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#NEC_PC-9800_series -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#NEC_PC-9800_series">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">NEC PC-9800 series</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Naver_Corporation -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Naver_Corporation">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Naver Corporation</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Niantic -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Niantic">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Niantic</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nightdive_Studios -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nightdive_Studios">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Nightdive Studios</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nintendo -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nintendo">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Nintendo</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nintendo_64 -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nintendo_64">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Nintendo 64</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nintendo_DS -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nintendo_DS">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Nintendo DS</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nintendo_Entertainment_Analysis__Development -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nintendo_Entertainment_Analysis__Development">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Nintendo Entertainment Analysis &amp; Development</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nintendo_Entertainment_System -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nintendo_Entertainment_System">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Nintendo Entertainment System</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nintendo_GameCube -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nintendo_GameCube">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Nintendo GameCube</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Nintendo_Switch -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Nintendo_Switch">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Nintendo Switch</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Philips_CD-i -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Philips_CD-i">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Philips CD-i</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#PlayStation -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#PlayStation">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">PlayStation</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#PlayStation_2 -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#PlayStation_2">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">PlayStation 2</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#PlayStation_3 -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#PlayStation_3">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">PlayStation 3</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#PlayStation_4 -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#PlayStation_4">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">PlayStation 4</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#PlayStation_Portable -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#PlayStation_Portable">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">PlayStation Portable</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#PlayStation_Vita -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#PlayStation_Vita">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">PlayStation Vita</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#SAM_CoupÃ -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#SAM_CoupÃ">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">SAM CoupÃ©</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Sega -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Sega">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Sega</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Sega_Genesis -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Sega_Genesis">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Sega Genesis</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Sony_Interactive_Entertainment -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Sony_Interactive_Entertainment">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Sony Interactive Entertainment</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Soren_Johnson -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Soren_Johnson">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Soren Johnson</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#South_Korea -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#South_Korea">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">South Korea</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Soviet_Union -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Soviet_Union">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">Soviet Union</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Steve_Turner -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Steve_Turner">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Steve Turner</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Tatung_Einstein -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Tatung_Einstein">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Tatung Einstein</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Travellers_Tales -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Travellers_Tales">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Traveller&apos;s Tales</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Ukraine -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Ukraine">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">Ukraine</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#United_Kingdom -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#United_Kingdom">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">United Kingdom</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#United_States -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#United_States">
+        <rdf:type rdf:resource="http://example.org/videogame#Country"/>
+        <rdfs:label xml:lang="en">United States</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Vadim_Gerasimov -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Vadim_Gerasimov">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Vadim Gerasimov</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Virgin_Interactive -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Virgin_Interactive">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Virgin Interactive</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Vladimir_Pokhilko -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Vladimir_Pokhilko">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">Vladimir Pokhilko</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Warner_Bros_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Warner_Bros_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Warner Bros. Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Webzen_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Webzen_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">Webzen Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Wii -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Wii">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Wii</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Wii_U -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Wii_U">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Wii U</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#WonderSwan_Color -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#WonderSwan_Color">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">WonderSwan Color</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Xbox -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Xbox">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Xbox</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Xbox_360 -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Xbox_360">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Xbox 360</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#Xbox_One -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#Xbox_One">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">Xbox One</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#ZX_Spectrum -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#ZX_Spectrum">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">ZX Spectrum</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#action-adventure_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#action-adventure_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">action-adventure game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#action_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#action_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">action game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#adventure_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#adventure_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">adventure video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#augmented_reality -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#augmented_reality">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">augmented reality</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#bishÅjo_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#bishÅjo_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">bishÅjo game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#cdppl -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#cdppl">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">cdp.pl</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#collect-a-thon_platformer -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#collect-a-thon_platformer">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">collect-a-thon platformer</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#construction_and_management_simulation -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#construction_and_management_simulation">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">construction and management simulation</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#eroge -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#eroge">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">eroge</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#first-person_shooter -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#first-person_shooter">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">first-person shooter</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#fishing_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#fishing_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">fishing video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#government_simulation_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#government_simulation_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">government simulation game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#grand_strategy_wargame -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#grand_strategy_wargame">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">grand strategy wargame</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#iOS -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#iOS">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">iOS</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#id_Software -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#id_Software">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">id Software</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#location-based_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#location-based_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">location-based game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#macOS -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#macOS">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">macOS</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#massively_multiplayer_online_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#massively_multiplayer_online_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">massively multiplayer online game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#massively_multiplayer_online_real-time_strategy_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#massively_multiplayer_online_real-time_strategy_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">massively multiplayer online real-time strategy game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#massively_multiplayer_online_role-playing_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#massively_multiplayer_online_role-playing_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">massively multiplayer online role-playing game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#nStigate_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#nStigate_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Developer"/>
+        <rdfs:label xml:lang="en">nStigate Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#point-and-click_adventure -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#point-and-click_adventure">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">point-and-click adventure</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#post-apocalyptic_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#post-apocalyptic_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">post-apocalyptic video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#puzzle_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#puzzle_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">puzzle video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#role-playing_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#role-playing_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">role-playing video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#romance_adventure_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#romance_adventure_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">romance adventure game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#science_fiction_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#science_fiction_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">science fiction video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#shoot_em_up -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#shoot_em_up">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">shoot &apos;em up</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#simulation_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#simulation_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">simulation video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#space_flight_simulation_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#space_flight_simulation_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">space flight simulation game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#space_trading_and_combat_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#space_trading_and_combat_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">space trading and combat game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#sports_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#sports_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">sports video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#stealth_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#stealth_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">stealth game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#strategy_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#strategy_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">strategy video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#survival_horror -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#survival_horror">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">survival horror</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#third-person_shooter -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#third-person_shooter">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">third-person shooter</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#turn-based_strategy_video_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#turn-based_strategy_video_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">turn-based strategy video game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#video_game_with_LGBT_character -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#video_game_with_LGBT_character">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">video game with LGBT character</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#visual_novel -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#visual_novel">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">visual novel</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#web_browser -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#web_browser">
+        <rdf:type rdf:resource="http://example.org/videogame#Platform"/>
+        <rdfs:label xml:lang="en">web browser</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#1C_Company -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#1C_Company">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">1C Company</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#2K_Games -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#2K_Games">
+        <rdf:type rdf:resource="http://example.org/videogame#Publisher"/>
+        <rdfs:label xml:lang="en">2K Games</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#3D_platform_game -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#3D_platform_game">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">3D platform game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/videogame#4X -->
+
+    <NamedIndividual rdf:about="http://example.org/videogame#4X">
+        <rdf:type rdf:resource="http://example.org/videogame#Genre"/>
+        <rdfs:label xml:lang="en">4X</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q215861 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q215861">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#GSC_Game_World"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#first-person_shooter"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#post-apocalyptic_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#science_fiction_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#survival_horror"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#E_Frontier"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#GSC_Game_World"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#cdppl"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Ukraine"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-03-20</vg:releaseDate>
+        <rdfs:label xml:lang="en">S.T.A.L.K.E.R.: Shadow of Chernobyl</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q216293 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q216293">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <rdfs:label xml:lang="en">Unknown Game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q216995 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q216995">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_64"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Wii_U"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Nintendo_Entertainment_Analysis__Development"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#collect-a-thon_platformer"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#3D_platform_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Nintendo"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Japan"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-06-23</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-09-29</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-03-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">Super Mario 64</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q217241 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q217241">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_2"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Guerrilla_Cambridge"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#third-person_shooter"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Sony_Interactive_Entertainment"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-28</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-03-17</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-22</vg:releaseDate>
+        <rdfs:label xml:lang="en">24: The Game</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q217423 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q217423">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Linux"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#MS-DOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Nightdive_Studios"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#id_Software"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#first-person_shooter"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#science_fiction_video_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Activision_Publishing"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Bethesda_Softworks"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#ClickBoom"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#GT_Interactive_Software"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#MacSoft_Games"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Macmillan_Inc"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Midway_Games"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Sega"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-06-22</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-07-05</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-08-25</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-08-28</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-11-27</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-12-02</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-05-31</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-08-19</vg:releaseDate>
+        <rdfs:label xml:lang="en">Quake</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q2374 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q2374">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Classic_Mac_OS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#macOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Aspyr"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Firaxis_Games"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#MacSoft_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#grand_strategy_wargame"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#simulation_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#strategy_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#turn-based_strategy_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#4X"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Aspyr"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Atari"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Infogrames"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#MacSoft_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-10-30</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-25</vg:releaseDate>
+        <rdfs:label xml:lang="en">Civilization III</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q2377 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q2377">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#macOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Firaxis_Games"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Soren_Johnson"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#grand_strategy_wargame"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#turn-based_strategy_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#4X"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Aspyr"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#1C_Company"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#2K_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-10-25</vg:releaseDate>
+        <rdfs:label xml:lang="en">Civilization IV</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q239889 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q239889">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Android"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_Switch"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_2"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_3"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_4"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Xbox"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Xbox_360"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Xbox_One"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#iOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Feral_Interactive"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#Christmas_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#stealth_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Eidos_Interactive"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Denmark"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-26</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-30</vg:releaseDate>
+        <rdfs:label xml:lang="en">Hitman: Blood Money</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q240143 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q240143">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Apple_II_series"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Atari_ST"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Commodore_64"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Commodore_Amiga"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#DOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_Entertainment_System"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#macOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Lucasfilm_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#adventure_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#point-and-click_adventure"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Lucasfilm_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1987-10-05</vg:releaseDate>
+        <rdfs:label xml:lang="en">Maniac Mansion</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q241377 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q241377">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Codemasters"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Naver_Corporation"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#massively_multiplayer_online_role-playing_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Webzen_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#South_Korea"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-03-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">Archlord</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q55815 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q55815">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Acorn_Archimedes"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Acorn_Electron"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Amstrad_CPC"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Apple_II"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Atari_ST"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#BBC_Micro"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Commodore_64"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Commodore_Amiga"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#DOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#MSX"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_Entertainment_System"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#SAM_CoupÃ"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Tatung_Einstein"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#ZX_Spectrum"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Ian_Bell"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#science_fiction_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#space_flight_simulation_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#space_trading_and_combat_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Imagineer"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1984-09-20</vg:releaseDate>
+        <rdfs:label xml:lang="en">Elite</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q55817 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q55817">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#ZX_Spectrum"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Ian_Weatherburn"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Imagine_Software"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-01-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">Alchemist</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q56879 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q56879">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Japan"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-02-21</vg:releaseDate>
+        <rdfs:label xml:lang="en">Syobon Action</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q56939 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q56939">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_GameCube"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_2"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Capcom"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#role-playing_video_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Capcom"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Japan"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-07-29</vg:releaseDate>
+        <rdfs:label xml:lang="en">Mega Man X: Command Mission</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q57270 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q57270">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_3"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Xbox_360"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#iOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#macOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Irrational_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#first-person_shooter"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#science_fiction_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#video_game_with_LGBT_character"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#2K_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Australia"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-08-21</vg:releaseDate>
+        <rdfs:label xml:lang="en">BioShock</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q57622 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q57622">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#ZX_Spectrum"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <rdfs:label xml:lang="en">All or Nothing</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q57631 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q57631">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#ZX_Spectrum"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#fishing_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#sports_video_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Virgin_Interactive"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-01-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">Angler</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q57639 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q57639">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_3"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#ZX_Spectrum"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Steve_Turner"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Hewson_Consultants"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <rdfs:label xml:lang="en">Avalon The 3D Adventure Movie</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q57644 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q57644">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#ZX_Spectrum"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1985-01-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">Back to Skool</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q59154 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q59154">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_3"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Xbox_360"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#macOS"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#third-person_shooter"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#2K_Games"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-08-24</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-08-27</vg:releaseDate>
+        <rdfs:label xml:lang="en">Mafia II</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q60102 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q60102">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Classic_Mac_OS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#DOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#macOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Black_Isle_Studios"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#post-apocalyptic_video_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#science_fiction_video_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Interplay_Entertainment"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-10-10</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-26</vg:releaseDate>
+        <rdfs:label xml:lang="en">Fallout</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q63064 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q63064">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#web_browser"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#government_simulation_game"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Australia"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-11-13</vg:releaseDate>
+        <rdfs:label xml:lang="en">NationStates</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q63266 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q63266">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Classic_Mac_OS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#DOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Intelligent_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#construction_and_management_simulation"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Maxis"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-01-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">SimIsle</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q63352 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q63352">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Android"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#iOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Niantic"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#augmented_reality"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#location-based_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#massively_multiplayer_online_real-time_strategy_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Niantic"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-11-15</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-07-14</vg:releaseDate>
+        <rdfs:label xml:lang="en">Ingress</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q71910 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q71910">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Acorn_Electron"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Amstrad_CPC"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Amstrad_PCW"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Android"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Apple_IIGS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Atari_Falcon"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Atari_ST"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Commodore_64"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Commodore_Amiga"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Game_Boy"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Game_Boy_Advance"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#MOTO_Gamme"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#MSX"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Mac_OS_operating_systems"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#NEC_PC-9800_series"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_Entertainment_System"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_Switch"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Philips_CD-i"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Sega_Genesis"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#WonderSwan_Color"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#ZX_Spectrum"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Alexey_Pajitnov"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Vadim_Gerasimov"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Vladimir_Pokhilko"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#puzzle_video_game"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Soviet_Union"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1984-06-06</vg:releaseDate>
+        <rdfs:label xml:lang="en">Tetris</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q71932 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q71932">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_Vita"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#nStigate_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#first-person_shooter"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Activision_Publishing"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-11-13</vg:releaseDate>
+        <rdfs:label xml:lang="en">Call of Duty: Black Ops: Declassified</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q71936 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q71936">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Wii"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Nintendo_Entertainment_Analysis__Development"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#sports_video_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Nintendo"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Japan"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-11-19</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-12-02</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-12-07</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-12-08</vg:releaseDate>
+        <rdfs:label xml:lang="en">Wii Sports</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q73289 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q73289">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_3"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_Portable"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Makura"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#bishÅjo_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#eroge"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#romance_adventure_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#visual_novel"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#Japan"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-03-29</vg:releaseDate>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-11-28</vg:releaseDate>
+        <rdfs:label xml:lang="en">Himawari no KyÅkai to Nagai Natsuyasumi</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q74061 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q74061">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Classic_Mac_OS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#DOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#IBM_PC_compatible"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Lucasfilm_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#shoot_em_up"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Lucasfilm_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-11-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">Star Wars: Rebel Assault II: The Hidden Empire</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q74245 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q74245">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#CyberStep"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action_game"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#massively_multiplayer_online_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#CyberStep"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-10-16</vg:releaseDate>
+        <rdfs:label xml:lang="en">GetAmped</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q74401 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q74401">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Classic_Mac_OS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Commodore_Amiga"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#DOS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#macOS"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Lucasfilm_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#point-and-click_adventure"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Lucasfilm_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-01-01</vg:releaseDate>
+        <rdfs:label xml:lang="en">Indiana Jones and the Fate of Atlantis</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q74539 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q74539">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Nintendo_DS"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#PlayStation_3"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Wii"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Xbox_360"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Lucasfilm_Games"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Activision_Publishing"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_States"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-26</vg:releaseDate>
+        <rdfs:label xml:lang="en">Star Wars: The Force Unleashed II</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q74545 -->
+
+    <NamedIndividual rdf:about="http://www.wikidata.org/entity/Q74545">
+        <rdf:type rdf:resource="http://example.org/videogame#Game"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Microsoft_Windows"/>
+        <vg:availableOn rdf:resource="http://example.org/videogame#Wii"/>
+        <vg:developedBy rdf:resource="http://example.org/videogame#Travellers_Tales"/>
+        <vg:hasGenre rdf:resource="http://example.org/videogame#action-adventure_game"/>
+        <vg:publishedBy rdf:resource="http://example.org/videogame#Warner_Bros_Games"/>
+        <vg:releasedInCountry rdf:resource="http://example.org/videogame#United_Kingdom"/>
+        <vg:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-09-23</vg:releaseDate>
+        <rdfs:label xml:lang="en">Lego Batman: The Videogame</rdfs:label>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

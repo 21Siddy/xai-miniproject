@@ -1,0 +1,8 @@
+{
+  "Run_1": {
+    "http://example.org/videogame#MultiGenreConcept": {
+      "best_concept": "OWLObjectIntersectionOf((OWLClass(IRI('http://example.org/videogame#','Game')), OWLObjectSomeValuesFrom(property=OWLObjectProperty(IRI('http://example.org/videogame#','publishedBy')),filler=OWLClass(IRI('http://example.org/videogame#','Company'))), OWLObjectMinCardinality(property=OWLObjectProperty(IRI('http://example.org/videogame#','hasGenre')),2,filler=OWLClass(IRI('http://example.org/videogame#','Genre')))))",
+      "concept_length": 10
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Run_1": {
+    "pred_accuracy": 0.6388888888888888,
+    "pred_precision": 0.5357142857142857,
+    "pred_recall": 1.0,
+    "pred_f1_score": 0.6976744186046512,
+    "exp_accuracy": 0.6111111111111112,
+    "exp_precision": 0.5,
+    "exp_recall": 1.0,
+    "exp_f1_score": 0.6666666666666666
+  }
+}
